@@ -1,1 +1,59 @@
-<text>Hello World</text>
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户openid -->
+  <view class="userinfo">
+    <button
+      open-type="getUserInfo"
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    >
+    </button>
+    <view class="userinfo-nickname-wrapper">
+      <button
+        class="userinfo-nickname" bindtap="onGetUserInfo"
+      >点击获取昵称
+      </button>
+      <view class="list">
+        <view class="list-item" bindtap="onGetUserInfo">
+          <text class="request-text">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 扫描二维码 -->
+  <view class="scaninfo">
+    <view class="scanInfo-wrapper">
+      <button
+        class="userinfo-nickname" bindtap="tapScan"
+      >{{scanInfo}}
+      </button>
+      <view class="list">
+        <view class="list-item" bindtap="tapScan">
+          <text class="request-text">{{scanInfo}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+    <view>
+    <view class="NetworkType">
+    <view class="NetworkType-wrapper">
+      <button
+        class="NetworkType-info" bindtap="getNetworkType"
+      >{{networkType}}
+      </button>
+      <view class="list">
+        <view class="list-item" bindtap="getNetworkType">
+          <text class="request-text">{{networkType}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+
+</view>
+

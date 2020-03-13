@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "login/login"
+    "pages/login"
   ],
   "sitemapLocation": "sitemap.json"
 }
